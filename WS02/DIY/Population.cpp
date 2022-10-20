@@ -27,8 +27,11 @@ namespace sdds
   FILE *abcd;
   bool load(const char *filename)
   {
-  sdds:
-    openFile(filename);
+    bool status = openFile(filename);
+    if (status) return true;
+    else{
+      return false;
+    }
   }
 
   void display()
