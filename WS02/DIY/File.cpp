@@ -20,7 +20,7 @@
 namespace sdds {
    FILE* fptr;
    // Opens a file and keeps the file pointer in the File.cpp (file scope)
-   bool openFile(const char filename[]) {
+   bool openFile(const char* filename) {
       fptr = fopen(filename, "r");
       return fptr != NULL;
    }
@@ -38,6 +38,9 @@ namespace sdds {
    // Closes the open file
    void closeFile() {
       if (fptr) fclose(fptr);
+   }
+   FILE* getPointer(){
+      return fptr;
    }
 
 }

@@ -63,6 +63,7 @@ bool readTesters() {
    int i;
    double d;
    char str[61];
+   
    if(read(i, fptr) && i == 13) {
       cout << "bool read(int& value, FILE* fptr) test passed" << endl;
    }

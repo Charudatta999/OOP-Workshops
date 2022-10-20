@@ -14,15 +14,18 @@
 /////////////////////////////////////////////////////////////////
 ***********************************************************************/
 #include "Population.h"
+#include <iostream>
+
 using namespace sdds;
 // The Load, display and deallocateMemory functions are the mandatory 
 // function to be created in part 2 of the lab
 
 int main() {
+   std::string filename = "PCpopulations.csv";
    // if loading of the population recrods into the dynamic memroy is successful
-   if(load("PCpopulations.csv")) {
+   if(sdds::load(filename.c_str())) {
       // display all the records
-      display();
+      sdds::display();
    }
    // in any case delete the dynmaic memory if it is allocated
    deallocateMemory();
